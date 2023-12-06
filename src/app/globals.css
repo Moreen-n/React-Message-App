@@ -1,0 +1,30 @@
+#posts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 15px;
+}
+
+.post-containers {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  width: 90%;
+  box-shadow: 5px 5px 10px grey;
+}
+#new-post-form {
+  display: flex;
+  flex-direction: column;
+}
+textarea {
+  height: 50px;
+  margin: 10px;
+}
+#create-post-button {
+  margin: 10px;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  box-shadow: 5px 5px 10px gray;
+}
