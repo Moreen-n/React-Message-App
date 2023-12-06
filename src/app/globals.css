@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: left;
   gap: 15px;
+  margin: 10px;
 }
 
 .post-containers {
@@ -27,4 +28,7 @@ textarea {
   background-color: black;
   color: white;
   box-shadow: 5px 5px 10px gray;
+}
+#thumb {
+  cursor: pointer;
 }
