@@ -2,6 +2,8 @@
 import { useRouter } from "next/navigation.js";
 
 import { API } from "@/lib/api";
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function DeletePost({ post }) {
   const router = useRouter();
@@ -17,7 +19,7 @@ export default function DeletePost({ post }) {
   return (
     <div>
       <button className="btns" onClick={handleDeleteButton}>
-        Delete post
+        <FontAwesomeIcon icon={faTrashAlt} />
       </button>
     </div>
   );

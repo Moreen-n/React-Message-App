@@ -1,9 +1,10 @@
 body {
-  background-color: rgb(59, 57, 57);
+  background-color: rgb(59, 3, 40);
   align-items: center;
 }
 h1 {
   color: beige;
+  font-family: Lorem ipsum dolor sit amet;
 }
 #posts-container {
   display: flex;
@@ -26,6 +27,7 @@ h1 {
 #new-post-form {
   display: flex;
   flex-direction: column;
+  margin-left: 50px;
 }
 textarea {
   height: 80px;
@@ -52,7 +54,17 @@ textarea {
   border: none;
 }
 .btns {
-  background-color: black;
-  color: white;
+  background-color: rgb(249, 245, 245);
+  color: black;
   border: none;
+  font-size: 20px;
+  gap: 10px;
+}
+
+#edit-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  width: fit-content;
 }

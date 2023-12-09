@@ -62,7 +62,9 @@ export default function Comments({ post, isCommenting, setIsCommenting }) {
             value={commentValue}
             onChange={(e) => SetCommentValue(e.target.value)}
           />
-          <button onClick={handleSaveComment}>Comment</button>
+          <button className="btns" onClick={handleSaveComment}>
+            Comment
+          </button>
           <button onClick={() => setIsCommenting(false)}>Cancel</button>
         </div>
       )}

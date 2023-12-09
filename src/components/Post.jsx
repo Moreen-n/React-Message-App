@@ -1,6 +1,9 @@
 "use client";
 import { useState } from "react";
 
+import { faComment, faEdit } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import Comments from "./comments.jsx";
 import DeletePost from "./DeletePost.jsx";
 import EditPost from "./EditPost.jsx";
@@ -25,9 +28,13 @@ export default function Post({ post }) {
       </div>
       <div className="post-buttons-containers">
         <LikePost post={post} />
-        <button onClick={() => setIsCommenting(true)}>💬</button>
+        <button onClick={() => setIsCommenting(true)}>
+          <FontAwesomeIcon icon={faComment} />
+        </button>
         <DeletePost post={post} />
-        <button onClick={() => setIsEditing(true)}>✏️</button>
+        <button onClick={() => setIsEditing(true)}>
+          <FontAwesomeIcon icon={faEdit} />
+        </button>
       </div>
       <div>
         {" "}

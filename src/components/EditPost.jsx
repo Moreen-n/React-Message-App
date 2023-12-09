@@ -42,14 +42,17 @@ export default function EditPost({ post, isEditing, setIsEditing }) {
   };
 
   return (
-    <div>
+    <div className="edit-container">
       {/* Display an input field for editing */}
       <input
+        id="edit-input"
         type="text"
         value={updatedText}
         onChange={(e) => setUpdatedText(e.target.value)}
       />
-      <button onClick={handleSaveClick}>Edit post</button>
+      <button className="btns" onClick={handleSaveClick}>
+        Edit post
+      </button>
       <button onClick={() => setIsEditing(false)}>Cancel</button>
     </div>
   );
