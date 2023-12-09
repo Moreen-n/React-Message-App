@@ -1,6 +1,6 @@
-import { API } from '@/lib/api';
+import { API } from "@/lib/api";
 
-import Post from './Post';
+import Post from "./Post";
 
 export default async function Posts() {
   const res = await fetch(`${API}/api/posts`, { cache: "no-store" });

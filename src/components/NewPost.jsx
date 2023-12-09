@@ -1,9 +1,10 @@
 "use client";
-import { useState } from 'react';
+import { useState } from "react";
 
-import { useRouter } from 'next/navigation.js';
+import { useRouter } from "next/navigation.js";
+import toast from "react-hot-toast";
 
-import { API } from '@/lib/api';
+import { API } from "@/lib/api";
 
 export default function NewPost() {
   const [postText, setPostText] = useState("");
@@ -21,6 +22,11 @@ export default function NewPost() {
       }),
     });
     const info = await response.json();
+    if (info.success) {
+      toast.success("post created");
+    } else {
+      toast.error("An error occured while creating a post");
+    }
     setPostText("");
     router.refresh();
   }
@@ -31,7 +37,12 @@ export default function NewPost() {
 
   return (
     <form id="new-post-form" onSubmit={handleFormSubmit}>
-      <textarea type="text" value={postText} placeholder='Hello world!' onChange={handleInputChanges} />
+      <textarea
+        type="text"
+        value={postText}
+        placeholder="Say something, let the world know."
+        onChange={handleInputChanges}
+      />
       <button type="submit" id="create-post-button">
         Submit Post
       </button>

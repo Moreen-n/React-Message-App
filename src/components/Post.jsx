@@ -1,13 +1,41 @@
-import DeletePost from './DeletePost.jsx';
-import LikePost from './LikePost.jsx';
+"use client";
+import { useState } from "react";
+
+import Comments from "./comments.jsx";
+import DeletePost from "./DeletePost.jsx";
+import EditPost from "./EditPost.jsx";
+import LikePost from "./LikePost.jsx";
 
 export default function Post({ post }) {
+  const [isEditing, setIsEditing] = useState(false);
+  const [isCommenting, setIsCommenting] = useState(false);
+
   return (
     <div className="post-containers">
-      {post.text}
+      <div>
+        {isEditing ? (
+          <EditPost
+            post={post}
+            isEditing={isEditing}
+            setIsEditing={setIsEditing}
+          />
+        ) : (
+          <span> {post.text}</span>
+        )}
+      </div>
       <div className="post-buttons-containers">
+        <LikePost post={post} />
+        <button onClick={() => setIsCommenting(true)}>💬</button>
         <DeletePost post={post} />
-        <LikePost post={post}/>
+        <button onClick={() => setIsEditing(true)}>✏️</button>
+      </div>
+      <div>
+        {" "}
+        <Comments
+          post={post}
+          isCommenting={isCommenting}
+          setIsCommenting={setIsCommenting}
+        />
       </div>
     </div>
   );

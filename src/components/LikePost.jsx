@@ -1,10 +1,9 @@
 "use client";
-import { useRouter } from 'next/navigation.js';
+import { useRouter } from "next/navigation.js";
 
-import { API } from '@/lib/api';
+import { API } from "@/lib/api";
 
 export default function LikePost({ post }) {
-  //   const [likes, setLikes] = useState(0);
   const router = useRouter();
 
   async function addLike() {
@@ -13,6 +12,7 @@ export default function LikePost({ post }) {
       cache: "no-store",
     });
     const info = await response.json();
+    // for my likes to show
     router.refresh();
 
     console.log(info);
@@ -20,9 +20,9 @@ export default function LikePost({ post }) {
 
   return (
     <div>
-      <p id="thumb" onClick={addLike}>
-        {post.likes}👍🏾
-      </p>
+      <button className="btns" onClick={addLike}>
+        {post.likes}❤️
+      </button>
     </div>
   );
 }
