@@ -42,6 +42,8 @@ export default function NewPost() {
         value={postText}
         placeholder="Say something, let the world know."
         onChange={handleInputChanges}
+        required
+        title="Please enter a post"
       />
       <button type="submit" id="create-post-button">
         Submit Post

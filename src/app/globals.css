@@ -100,3 +100,6 @@ textarea {
 .txt {
   margin-bottom: 30px;
 }
+.comment-text {
+  white-space: pre-line;
+}
