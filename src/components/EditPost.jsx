@@ -50,10 +50,12 @@ export default function EditPost({ post, isEditing, setIsEditing }) {
         value={updatedText}
         onChange={(e) => setUpdatedText(e.target.value)}
       />
-      <button className="btns" onClick={handleSaveClick}>
-        Edit post
-      </button>
-      <button onClick={() => setIsEditing(false)}>Cancel</button>
+      <div className="edit-btns">
+        <button className="edit-btns" onClick={handleSaveClick}>
+          Edit post
+        </button>
+        <button onClick={() => setIsEditing(false)}>Cancel</button>
+      </div>
     </div>
   );
 }

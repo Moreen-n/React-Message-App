@@ -54,7 +54,7 @@ export default function Comments({ post, isCommenting, setIsCommenting }) {
   };
   console.log(comments);
   return (
-    <div id="comments-container">
+    <div className="edit-input">
       {isCommenting && (
         <div>
           <input
@@ -62,10 +62,10 @@ export default function Comments({ post, isCommenting, setIsCommenting }) {
             value={commentValue}
             onChange={(e) => SetCommentValue(e.target.value)}
           />
-          <button className="btns" onClick={handleSaveComment}>
-            Comment
-          </button>
-          <button onClick={() => setIsCommenting(false)}>Cancel</button>
+          <div className="edit-btns">
+            <button onClick={handleSaveComment}>Comment</button>
+            <button onClick={() => setIsCommenting(false)}>Cancel</button>
+          </div>
         </div>
       )}
       {comments.map((comment) => (

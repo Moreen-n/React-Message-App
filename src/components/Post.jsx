@@ -23,7 +23,7 @@ export default function Post({ post }) {
             setIsEditing={setIsEditing}
           />
         ) : (
-          <span> {post.text}</span>
+          <span className="txt"> {post.text}</span>
         )}
       </div>
       <div className="post-buttons-containers">
