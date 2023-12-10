@@ -28,11 +28,11 @@ export default function Post({ post }) {
       </div>
       <div className="post-buttons-containers">
         <LikePost post={post} />
-        <button onClick={() => setIsCommenting(true)}>
+        <button className="btns" onClick={() => setIsCommenting(true)}>
           <FontAwesomeIcon icon={faComment} />
         </button>
         <DeletePost post={post} />
-        <button onClick={() => setIsEditing(true)}>
+        <button className="btns" onClick={() => setIsEditing(true)}>
           <FontAwesomeIcon icon={faEdit} />
         </button>
       </div>
