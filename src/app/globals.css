@@ -5,6 +5,8 @@ body {
 h1 {
   color: rgb(11, 11, 10);
   font-family: Lorem ipsum dolor sit amet;
+  margin-left: 600px;
+  font-size: 40px;
 }
 #posts-container {
   display: flex;

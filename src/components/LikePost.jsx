@@ -1,13 +1,11 @@
 "use client";
-import { useRouter } from "next/navigation.js";
-
-import { API } from "@/lib/api";
+import { useRouter } from 'next/navigation.js';
 
 export default function LikePost({ post }) {
   const router = useRouter();
 
   async function addLike() {
-    const response = await fetch(`${API}/api/posts/${post.id}/likes`, {
+    const response = await fetch(`/api/posts/${post.id}/likes`, {
       method: "POST",
       cache: "no-store",
     });
