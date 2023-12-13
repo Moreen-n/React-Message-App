@@ -36,7 +36,7 @@ export default function Post({ post }) {
           <FontAwesomeIcon icon={faEdit} />
         </button>
       </div>
-      <div>
+      <div className="comments">
         {" "}
         <Comments
           post={post}
