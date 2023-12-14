@@ -1,16 +1,13 @@
 "use client";
-import { useState } from 'react';
+import { useState } from "react";
 
-import {
-  faComment,
-  faEdit,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faComment, faEdit } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import Comments from './comments.jsx';
-import DeletePost from './DeletePost.jsx';
-import EditPost from './EditPost.jsx';
-import LikePost from './LikePost.jsx';
+import Comments from "./comments.jsx";
+import DeletePost from "./DeletePost.jsx";
+import EditPost from "./EditPost.jsx";
+import LikePost from "./LikePost.jsx";
 
 export default function Post({ post }) {
   const [isEditing, setIsEditing] = useState(false);

@@ -3,6 +3,8 @@ import { Toaster } from "react-hot-toast";
 import NewPost from "@/components/NewPost";
 import Posts from "@/components/Posts";
 
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   return (
     <main>
