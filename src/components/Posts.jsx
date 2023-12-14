@@ -4,7 +4,11 @@ import Post from "./Post";
 
 const Posts = async () => {
   try {
-    const posts = await prisma.post.findMany();
+    const posts = await prisma.post.findMany({
+      orderBy: {
+        createdAt: "desc",
+      },
+    });
 
     return (
       <div id="posts-container">
